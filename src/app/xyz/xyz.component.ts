@@ -15,9 +15,7 @@ export class XyzComponent implements OnInit {
   ngOnInit(): void {}
 
   async getToken() {
-    let client = new brigade.APIClient(this.apiAddress, '', {
-      allowInsecureConnections: true,
-    });
+    let client = new brigade.APIClient(this.apiAddress, '');
 
     let token = await client
       .authn()
